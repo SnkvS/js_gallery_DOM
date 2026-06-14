@@ -3,13 +3,13 @@
 const image = document.getElementById('thumbs');
 const largeImage = document.getElementById('largeImg');
 
-image.addEventListener('click', (event) => {
-  const link = event.target.closest('a');
+image.addEventListener('click', (e) => {
+  const link = e.target.closest('a');
 
   if (!link) {
     return;
   }
-  event.preventDefault();
+  e.preventDefault();
   largeImage.src = link.href;
   largeImage.alt = link.alt;
 });

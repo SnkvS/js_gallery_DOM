@@ -9,7 +9,10 @@ image.addEventListener('click', (e) => {
   if (!link) {
     return;
   }
+
+  const alt = link.querySelector('img');
+
   e.preventDefault();
   largeImage.src = link.href;
-  largeImage.alt = link.alt;
+  largeImage.alt = alt.alt;
 });
